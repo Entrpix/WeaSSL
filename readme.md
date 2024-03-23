@@ -14,7 +14,12 @@ npm run build
 ## Usage
 ```js
 const weassl = require('weassl');
-const ssl = weassl.importKey('path/to/key.pem', 'path/to/cert.pem');
+
+const serverOptions = weassl.importKey('path/to/key.pem', 'path/to/cert.pem');
+
+https.createServer(serverOptions, app).listen(443, () => {
+  console.log('Server running at https://localhost:443/');
+});
 ```
 
 ```js
