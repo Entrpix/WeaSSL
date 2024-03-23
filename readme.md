@@ -14,6 +14,7 @@ npm run build
 ## Usage
 ```js
 const weassl = require('weassl');
+const https = require('https');
 
 const serverOptions = weassl.importKey('path/to/key.pem', 'path/to/cert.pem');
 
@@ -24,8 +25,8 @@ https.createServer(serverOptions, app).listen(443, () => {
 
 ```js
 // ExpressJS
-const { importKey } = require('weassl');
 const express = require('express');
+const weassl = require('weassl');
 const https = require('https');
 
 const serverOptions = importKey('path/to/key.pem', 'path/to/cert.pem');
@@ -42,7 +43,7 @@ https.createServer(serverOptions, app).listen(443, () => {
 
 ```js
 // Built-In HTTP/S Library
-const { importKey } = require('weassl');
+const weassl = require('weassl');
 const https = require('https');
 
 const serverOptions = importKey('path/to/key.pem', 'path/to/cert.pem');
