@@ -18,7 +18,7 @@ const https = require('https');
 
 const serverOptions = weassl.importKey('path/to/key.pem', 'path/to/cert.pem');
 
-https.createServer(serverOptions, app).listen(443, () => {
+server.listen(443, () => {
   console.log('Server running at https://localhost:443/');
 });
 ```
